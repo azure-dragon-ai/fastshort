@@ -6,7 +6,8 @@ WORKDIR /app
 RUN npm install --global "pnpm" --registry=https://registry.npmmirror.com
 
 COPY . .
-RUN pnpm config set registry https://registry.npmmirror.com && pnpm install
+RUN pnpm config set registry https://registry.npmmirror.com
+RUN pnpm install --registry=https://registry.npmmirror.com
 
 ENV PLATFORM=PROD \
   IN_DOCKER=true
