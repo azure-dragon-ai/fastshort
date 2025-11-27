@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  mongodb:
+    image: mongo
+    restart: always
+
+  server:
+    image: fastshort/server:latest
+    restart: always
+    ports:
+      - 8060:3000
+
+  admin:
+    image: fastshort/admin:latest
+    restart: always
+    ports:
+      - 8061:80
+  
+  webapp:
+    image: fastshort/webapp:latest
+    restart: always
+    ports:
+      - 8063:80
+  
