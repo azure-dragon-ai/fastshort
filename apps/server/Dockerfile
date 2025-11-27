@@ -2,9 +2,11 @@ FROM node:18.19.0-alpine
 LABEL maintainer "Peter Zhang <zhangchunsheng423@gmail.com>"
 WORKDIR /app
 
-RUN npm install --global "pnpm"
+# https://registry.npmmirror.com/
+RUN npm install --global "pnpm" --registry=https://registry.npmmirror.com
 
 COPY . .
+RUN pnpm config set registry https://registry.npmmirror.com/
 RUN pnpm install
 
 ENV PLATFORM=PROD \
