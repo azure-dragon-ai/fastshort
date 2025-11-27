@@ -7,7 +7,7 @@ COPY . .
 
 ENV DEFINE_DOCKER_URL=http://localhost:3000
 RUN pnpm install --registry=https://registry.npmmirror.com
-RUN pnpm build
+RUN npm run build
 
 
 FROM nginx:alpine as nginx
