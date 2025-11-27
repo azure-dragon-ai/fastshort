@@ -6,7 +6,7 @@ services:
     restart: always
 
   server:
-    image: fastshort/server:latest
+    image: yiluxiangbei/minidrama-server
     restart: always
     ports:
       - 8060:3000
