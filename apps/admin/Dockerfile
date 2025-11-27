@@ -1,4 +1,4 @@
-FROM node:18 as build
+FROM node:16.17.0 as build
 LABEL maintainer "Peter Zhang <zhangchunsheng423@gmail.com>"
 WORKDIR /build
 
