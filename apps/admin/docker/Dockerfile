@@ -9,10 +9,8 @@ COPY ./ $WORKDIR/
 ARG version
 ENV COMMITID=$version
 
-RUN npm i -g pnpm
-
-RUN pnpm install
-RUN pnpm build
+RUN npm install --registry=https://registry.npmmirror.com
+RUN npm run build
 
 FROM nginx:alpine as prod
 
