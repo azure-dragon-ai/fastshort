@@ -15,6 +15,7 @@
   "bugs": {
     "url": "https://github.com/honghuangdc/soybean-admin/issues"
   },
+  "type": "module",
   "keywords": [
     "Vue",
     "Vue3",
