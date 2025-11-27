@@ -1,12 +1,11 @@
-FROM node:18 as build
+FROM node:16.17.0 as build
 LABEL maintainer "Peter Zhang <zhangchunsheng423@gmail.com>"
 WORKDIR /build
 
-RUN npm install --global "pnpm" --registry=https://registry.npmmirror.com
 COPY . .
 
 ENV DEFINE_DOCKER_URL=http://localhost:3000
-RUN pnpm install --registry=https://registry.npmmirror.com
+RUN npm install --registry=https://registry.npmmirror.com
 RUN npm run build
 
 
