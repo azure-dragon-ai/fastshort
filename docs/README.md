@@ -1,6 +1,9 @@
 ```shell
-cd apps/server/
+cd apps/server
 sudo docker build -t yiluxiangbei/minidrama-server .
+
+cd apps/admin
+sudo docker build -t yiluxiangbei/minidrama-admin .
 
 sudo docker compose start mongodb
 sudo docker compose up -d
